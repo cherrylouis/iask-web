@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.downjoy.iask.dao.UserDao">
+
+	<insert id="insert" parameterType="com.downjoy.iask.domain.User">
+		insert into
+		t_user(id,user_nick_name,user_name,user_level)
+		values(#{id},#{userNickName},#{userName},#{userLevel})
+	</insert>
+
+	<update id="update" parameterType="com.downjoy.iask.domain.User">
+		update t_user set
+		user_nick_name=
+		#{userNickName} where id=#{id}
+	</update>
+
+	<select id="getUserInfo" parameterType="int"
+		resultType="com.downjoy.iask.domain.User">
+		select
+		t.user_nick_name,t.user_name from t_user t
+		where
+		t.id=#{id}
+	</select>
+
+	<select id="getUserCount" parameterType="int" resultType="int">
+		select
+		count(*) from t_user t
+		where
+		t.id=#{id}
+	</select>
+
+	<select id="getAnswerNumberList" parameterType="com.downjoy.iask.domain.RequestUser"
+		resultType="com.downjoy.iask.domain.ResponseUser">
+
+		SELECT
+		count(*) AS count,
+		user_id as userId
+		FROM
+		(
+		SELECT
+		*
+		FROM
+		t_answer
+		WHERE
+		answer_time BETWEEN #{beginData}
+		AND #{endDate}
+		) AS
+		t_answer
+		GROUP BY
+		user_id
+		ORDER
+		BY
+		count DESC
+
+	</select>
+
+	<select id="getAdoptionList" parameterType="com.downjoy.iask.domain.RequestUser"
+		resultType="com.downjoy.iask.domain.ResponseUser">
+
+		SELECT
+		count(*) AS count,
+		user_id as userId
+		FROM
+		(
+		SELECT
+		*
+		FROM
+		t_answer
+		WHERE
+		answer_best_mark = '1'
+		AND answer_time BETWEEN
+		#{beginData}
+		AND #{endDate}
+		) AS t_answer
+		GROUP BY
+		user_id
+		ORDER BY
+		count
+		DESC
+
+	</select>
+
+
+
+
+</mapper>

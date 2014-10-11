@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.downjoy.iask.dao.QuestionDao">
+
+	<resultMap id="ResultMap" type="com.downjoy.iask.domain.Questions">
+		<id column="id" property="id" />
+		<result column="question_title" property="questionTitle" />
+		<result column="question_create_time" property="questionCreateTime" />
+		<result column="question_reward_points" property="questionRewardPoints" />
+	</resultMap>
+
+	<select id="queryBrowseNum" parameterType="com.downjoy.iask.domain.Questions"
+		resultType="int">
+		select IFNULL(question_browse_num,0) as question_browse_num
+		from
+		t_questions t
+		where id=#{id}
+	</select>
+
+	<update id="update" parameterType="com.downjoy.iask.domain.Questions">
+		update t_questions
+		set
+		question_browse_num=#{questionBrowseNum}
+		where id=#{id}
+	</update>
+
+
+	<select id="isNotAdopt" parameterType="com.downjoy.iask.domain.RequestAdopt"
+		resultMap="ResultMap">
+		select
+		q.id,q.question_title,q.question_create_time,q.question_reward_points
+		from t_questions q left JOIN t_answer a on q.id=a.question_id where
+		a.question_id is NULL
+		order by
+		<if test="createTime">
+			createTime
+		</if>
+
+		<if test="questionRewardPoints">
+			,questionRewardPoints
+		</if>
+	</select>
+
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id"
+		parameterType="com.downjoy.iask.domain.Questions">
+		insert into t_questions(
+		user_id,
+		question_title,
+		game_id,
+		question_description,
+		question_create_time,
+		question_status,
+		question_reward_points,
+		question_pic_num,
+		question_pv,
+		question_answ_num,
+		question_answ_limit,
+		question_browse_num,
+		question_source,
+		question_site,
+		)
+		values(
+		#{userId},
+		#{questionTitle},
+		#{gameId},
+		#{questionDescription},
+		#{questionCreateTime},
+		#{questionStatus},
+		#{questionRewardPoints},
+		#{questionPicNum},
+		#{questionPV},
+		#{questionAnswNum},
+		#{questionAnswLimit},
+		#{questionBrowseNum},
+		#{questionSource},
+		#{questionSite}
+		)
+	</insert>
+
+
+	<select id="getRecommendationContent" resultType="com.downjoy.iask.domain.RequestRecommendation">
+		select
+		t.content_url as contentUrl,t.img_url as imgUrl from t_recommendation
+		t
+	</select>
+
+</mapper>

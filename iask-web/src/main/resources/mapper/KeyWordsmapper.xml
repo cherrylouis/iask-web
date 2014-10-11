@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.downjoy.iask.dao.KeyWordsDao" >
+	<resultMap id="BaseResultMap" type="com.downjoy.iask.domain.KeyWords" >
+		<id column="id" property="id" jdbcType="VARCHAR" />
+		<id column="key_words" property="words" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<!-- 更新对象 -->  
+	<update id="update" parameterType="com.downjoy.iask.domain.KeyWords">  
+     update emp  set frequency = frequency +1 where  key_words = #{keyWords,jdbcType=VARCHAR}
+	</update> 
+  
+	<select id="select" resultMap="BaseResultMap">
+  	 	select w.id id, w.key_words keyWords, w.pinin_init_code pininInitCode, w.pinin_all_code pininAllCode, w.frequency frequency FROM t_key_words w  
+	</select>
+</mapper>

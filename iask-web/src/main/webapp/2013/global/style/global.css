@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+html{font:normal 12px/1.5em Arial,Helvetica;color:#333;background-color:#FFF}
+body,h1,h2,h3,h4,h5,p,dl,dt,dd,ul,li,form{margin:0;padding:0}
+h1,h2,h3,h4,h5{display:inline}
+ul,li{list-style:none}
+em{font-style:normal;font-weight:bold;letter-spacing:0}
+img,a img{border:0; vertical-align:middle}
+input{vertical-align:middle}
+label{cursor:pointer}
+label.active{font-weight:bold}
+input[type="submit"]{cursor:pointer}
+a{text-decoration:none;color:#808080}
+a:hover{text-decoration:underline}
+div{word-wrap:break-word;}
+.fl{float:left}
+.fr{float:right}
+.of{overflow:hidden}
+.clear{clear:both;height:0;line-height:0;font-size:0;display:block}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:"";clear:both;height:0}
+#contenter,#footer,.layout{width:960px;margin:0 auto;}
+.rb, .lb{background:url(../images/siteNavBg.gif) no-repeat}
+.rb{background-position:right 0; padding:0 10px 0 0}
+.lb{background-position:left 0}
+/*顶部导航*/
+#siteNav{background:url(../images/siteNavBg.gif) bottom left repeat-x #FFF;line-height:30px;clear:both}
+#siteNav .layout{margin:0 auto;width:960px;text-align:right}
+#siteNav a{padding:0 8px}
+#siteNav a:hover{color:#0076D4;text-decoration:none}
+#siteNav em{color:#D90000}
+#siteNav a.nickName{color:#0076D4;padding:0}
+#siteNav .mobV{background:url(../images/mobicon.gif) 0 0 no-repeat;padding-left:12px;margin-left:8px;vertical-align:middle}
+/*带logo顶部导航*/
+#channelNav{background:url(../images/siteNavBg.gif) bottom left repeat-x #FFF;line-height:50px;clear:both}
+#channelNav .layout{margin:0 auto;width:960px;text-align:right}
+#channelNav a{padding:0 8px}
+#channelNav a:hover{color:#0076D4;text-decoration:none}
+#channelNav em{color:#D90000}
+#channelNav h2{float:left;padding-right:10px;text-align:left}
+#channelNav h2 a{padding:0;float:left;display:block;background:url(../images/wap_mall.png) no-repeat;width:130px;height:50px;overflow:hidden;text-indent:-9999em}
+#channelNav a.nickName{color:#0076D4;padding:0}
+#channelNav .mobV{background:url(../images/mobicon.gif) 0 0 no-repeat;padding-left:12px;margin-left:8px;vertical-align:middle}
+/*头部*/
+#head{width:100%;margin:0 auto}
+.siteLogo{float:left}
+.siteLogo a{background:url(../images/logo.gif) no-repeat;display:block;width:200px;height:70px;overflow:hidden;text-indent:-9999em}
+/*底部*/
+#footer{width:960px;margin:0 auto;text-align:center;line-height:26px;clear:both}

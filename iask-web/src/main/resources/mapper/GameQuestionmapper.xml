@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.downjoy.iask.dao.GameQuestionDao">
+
+	<resultMap type="com.downjoy.iask.domain.Questions" id="usermap">
+		<id column="id" property="id" />
+		<result column="gameId" property="game_id" />
+		<result column="questionTitle" property="question_title" />
+	</resultMap>
+
+	<select id="countParam" parameterType="string" resultType="int">
+		SELECT COUNT(*) from t_questions WHERE game_id=#{gameId}
+	</select>
+</mapper>

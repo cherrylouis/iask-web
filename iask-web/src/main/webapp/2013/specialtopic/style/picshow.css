@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+date:2014-5-29
+by:lily li
+*/
+.contentT{width:960px}
+.contentTitle{width:960px;background:url(../images/titlebg.jpg) no-repeat 0 0}
+.piclistCon{width:940px;min-height:500px;_height:500px;padding:0 10px 20px;background-color:#fff}
+/*picscreenlist*/
+.picscreenlist{min-height:429px;_height:429px;padding:10px 0 35px}
+.picscreenlist ul{padding:0 34px 10px}
+.picscreenlist li{width:206px;height:196px;overflow:hidden;float:left;padding:8px 6px 0;text-align:center;line-height:40px;font-size:14px}
+.picscreenlist li img{width:200px;height:150px;border:3px solid #752dcd}
+/*picscreendetail*/
+.newsdetail{position:relative;width:900px;min-height:496px;_height:496px;padding:10px 20px 25px}
+.detailre{position:absolute;right:28px;top:-44px;height:41px}
+.detailre a{display:inline-block;width:17px;height:41px;margin:0 6px;background:url(../images/btnbg.png) no-repeat}
+.detailre a.pre{background-position:0 -60px}
+.detailre a.pre:hover{background-position:-38px -60px}
+.detailre a.next{background-position:-18px -60px}
+.detailre a.next:hover{background-position:-56px -60px}
+.newsTitle{width:900px}
+.detailsCon{width:900px;padding:20px 0;border-top:1px dashed #93a4bc}
+.detailsCon img,.detailsCon embed{max-width:900px}
+/*video*/
+.videoList{min-height:476px;_height:476px;}
+.videoList li{position:relative;height:171px}
+.videoList li div,.videoList li img{height:125px}
+.videoList span{cursor:pointer;position:absolute;left:50%;top:50%;width:46px;height:47px;margin:-39px 0 0 -23px;background:url(../images/videoiconSmallbg.png) no-repeat 0 0}
+.videodetailre{top:16px}

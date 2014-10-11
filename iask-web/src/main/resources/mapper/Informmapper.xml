@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.downjoy.iask.dao.InformDao">
+
+	<select id="get" resultType="com.downjoy.iask.domain.Inform">
+		select id,user_id as userId,
+		question_id as questionId,
+		inform_url as
+		informUrl,
+		inform_content as
+		informContent,
+		inform_type as
+		informType,
+		inform_num as
+		informNum
+		from
+		t_inform
+		where
+		question_id=#{questionId}
+	</select>
+
+	<insert id="insert" parameterType="com.downjoy.iask.domain.Inform">
+		insert into
+		t_inform(question_id,user_id,inform_url,inform_content,inform_type,inform_num)
+		values(#{questionId},#{userId},#{informUrl},#{informContent},#{informType},#{informNum})
+	</insert>
+
+	<update id="update" parameterType="com.downjoy.iask.domain.Inform">
+		update t_inform set
+		inform_num=
+		#{informNum} where id=#{id}
+	</update>
+
+
+
+</mapper>

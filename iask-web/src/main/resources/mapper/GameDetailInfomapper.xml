@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.downjoy.iask.dao.GameDetailInfoDao">
+
+	<resultMap id="ResultMap" type="com.downjoy.iask.domain.GameDetailInfo">
+		<id column="id" property="id" />
+		<result column="game_name" property="gameName"  />
+		<result column="game_init_code" property="gameInitCode"  />
+		<result column="game_all_code" property="gameAllCode"  />
+		<result column="game_version" property="gameVersion"  />
+		<result column="game_update_time" property="gameUpdateTime"  />
+		<result column="game_status" property="gameStatus"  />
+		<result column="game_icon" property="gameIcon"  />
+
+	</resultMap>
+	<select id="selectParam" parameterType="com.downjoy.iask.domain.GameDetailInfo"
+		resultMap="ResultMap">
+		select id,
+		game_name,
+		game_init_code,
+		game_all_code,
+		game_version ,
+		game_update_time,
+		game_status,
+		game_icon
+
+		from t_game_detail where
+		game_update_time = #{gameUpdateTime}
+	</select>
+
+	<select id="select" resultMap="ResultMap">
+		select id ,
+		game_name ,
+		game_init_code ,
+		game_all_code ,
+		game_version ,
+		game_update_time ,
+		game_status,
+		game_icon
+
+		from t_game_detail
+	</select>
+
+</mapper>

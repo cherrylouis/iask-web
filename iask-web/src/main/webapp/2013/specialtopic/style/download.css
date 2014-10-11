@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+date:2014-5-29
+by:lily li
+*/
+.contentT,.contentTitle{width:960px}
+/*download*/
+.download{width:960px;height:auto;margin:0 auto;padding:40px 0 100px;background-color:#fff}
+.downsubconShow{position:relative;width:706px;margin:10px auto 0;border:2px solid #f9d4a0;background-color:#fffded}
+.downsubconShowtop{cursor:pointer;width:671px;height:35px;padding:10px 15px 0 20px;line-height:25px}
+.downsubconShowtop h3,.downsubconShowtop p{float:left;font-size:20px;color:#f18d03}
+.downsubconShowtop p{padding:3px 0 0 20px;_padding:1px 0 0 20px;font-size:12px;color:#575757}
+.downsubconShowtop span{width:12px;height:13px;float:right;margin-top:6px;background:url(../images/showhiddenbg.png) no-repeat}
+.downsubconShowtop span.upshow{background-position:0 -15px}
+.downsubconShowtop span.downhide{background-position:0 0}
+.downsubconShowcon{width:688px;padding-left:18px}
+.gamesdownBtn{width:688px;height:56px}
+.gamesdownBtn dd{position:relative;height:46px;float:left}
+.gamesdownBtn a.localdown,.gamesdownBtn span.phonedown,.gamesdownBtn span.code{cursor:pointer;display:block;width:138px;height:46px;margin-right:28px;background:url(../images/gamedownbtnbg.png) no-repeat}
+.gamesdownBtn a.localdown{background-position:0 0}
+.gamesdownBtn span.phonedown{text-indent:-9999em;background-position:0 -49px}
+.phonedowCon{display:none;position:absolute;left:-20px;top:46px;width:179px;height:149px;*height:144px;padding-top:12px;*padding-top:17px;background:url(../images/dropdownbg.png) no-repeat 0 0}
+.phonedowCon a{display:block;width:109px;height:40px;margin:6px auto 0;padding-left:49px;color:#009ed2;font:bold 15px/40px "Microsoft YaHei";background:#edf6f9 url(../images/gamedownbtnbg.png) no-repeat}
+.phonedowCon a:hover{text-decoration:none}
+.phonedowCon a.wdj{background-position:-98px -232px}
+.phonedowCon a.phoneaide{background-position:-98px -146px}
+.phonedowCon a.qqphone{background-position:-98px -189px}
+.gamesdownBtn span.code{text-indent:-9999em;background-position:0 -98px}
+.gamesdownBtn span.codeCon{display:none;position:absolute;left:0;top:46px;width:141px;height:148px;padding-top:13px;line-height:20px;color:#333;text-align:center;background:url(../images/dropdownbg.png) no-repeat -187px 0}
+.gamesdownBtn span.codeCon img{width:120px;height:120px}
+.gamesdownBtn span.codeCon a{color:#329dd1}
+.gamesdownBtn dd.howUse{padding-top:6px;line-height:30px}
+.gamesdownBtn dd.howUse span{cursor:pointer;color:#329dd1}
+.gamesSys{height:30px;line-height:20px;color:#575757}
+.gamesSys a,.gamesSys strong{color:#f18d03}
+.gamesSys a{padding-left:12px;cursor:pointer;font-weight:bold}

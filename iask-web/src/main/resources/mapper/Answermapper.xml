@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.downjoy.iask.dao.AnswerDao">
+
+	<insert id="insert" parameterType="com.downjoy.iask.domain.Answers">
+		insert into
+		t_user(
+		answer_context,
+		answer_best_mark,
+		answer_support_num,
+		answer_opposition_num,
+		user_id,
+		answer_time,
+		question_id,
+		answer_pv,
+		answer_pv,
+		)
+		values(
+		#{answerContext}
+		#{answerBestMark}
+		#{answerSupportNum}
+		#{answerOppositionNum}
+		#{userId}
+		#{answerTime}
+		#{questionId}
+		#{answerPv}
+
+		)
+	</insert>
+
+
+
+</mapper>

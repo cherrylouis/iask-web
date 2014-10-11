@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+date:2014-5-28
+by:lily li
+*/
+.sublistCon{background-position:0 -126px}
+.contentL{width:628px;min-height:500px;_height:500px}
+.contentR{width:322px}
+.fixed{position:fixed;_position:absolute;+top:0!important;top:0;z-index:9999;top:expression(eval(document.documentElement.scrollTop + 0));left:top:expression(eval(document.documentElement.clientWidth - 960)/2);margin-left:638px;*margin-left:10px;margin-top:0}
+.listCon{width:608px;min-height:307px;_height:307px;padding:0 10px;background-color:#fff}
+.contentTitle{background-position:0 -126px}
+/*newslist*/
+.newslist{wdith:608px;min-height:363px;_height:363px;padding:10px 0 30px}
+.newslist li{width:608px;height:30px;float:left;line-height:30px}
+.newslist li.newsBorder{width:608px;height:0;padding-top:12px;margin-bottom:13px;font-size:0;line-height:0;border-bottom:1px dashed #93a4bc}
+.newslist li div{width:442px;height:30px;float:left;padding-left:12px;font-size:14px;background:url(../images/pointPNG8.png) no-repeat 5px 12px}
+.newslist li span{width:70px;float:right;padding-left:10px}
+
+.strategyTab{height:40px;line-height:40px;text-align:center}
+.strategyTab a{margin:0 12px}
+.strategyTab a.hover,.strategyTab a:hover{color:#1758bd;font-weight:bold;text-decoration:none}
+/*information*/
+.infoTitle{width:322px;background:url(../images/titlebg.jpg) no-repeat -638px -126px}
+.infoCon{width:302px;padding:12px 10px 15px;background-color:#fff}
+.infoCon li{width:288px;height:28px;line-height:28px;padding-left:14px;font-size:14px;background:url(../images/pointPNG8.png) no-repeat 4px -28px}
+/*newsdetail*/
+.newsdetail{width:578px;min-height:407px;_height:407px;padding:0 15px}
+.detailsInfo{width:578px;height:20px;padding-bottom:12px;line-height:20px;color:#999;text-align:center}
+.detailsInfo span{padding:0 10px}
+.newsTitle,.detailsCon{width:578px}
+.detailsCon img,.detailsCon embed{max-width:578px}
+/*read*/
+.read{width:608px;border-top:1px solid #cdcfd0}
+.readTitle{height:32px;padding:2px 10px 0;line-height:32px;color:#1758bd;font-size:16px}
+.read ul{width:570px;padding:5px 15px}
+.read li{width:570px;height:30px;float:left;line-height:30px;font-size:14px}
+.read li div{width:440px;height:30px;float:left;padding-left:14px;background:url(../images/pointPNG8.png) no-repeat 0 12px}
+.read li span{width:35px;height:30px;float:right;overflow:hidden;font-size:12px}
+/*comment*/
+.commentAll{width:600px;padding:0 4px}
+.comment{width:576px;height:200px;padding:6px 12px 10px;background-color:#e5edf7}
+.comment .readTitle{padding:0}
+.comment textarea{width:564px;height:100px;padding:5px;margin-top:8px;font-size:14px;color:#9f9f9f;line-height:24px;background-color:#fff;border:1px solid #789dcc}
+.commentLRBtn{width:576px;height:30px;padding-top:10px;line-height:30px;color:#4f1f11}
+.commentLRBtn span{float:left}
+.commentLRBtn span a{cursor:pointer;color:#1758bd;text-decoration:underline}
+.commentLRBtn input{cursor:pointer;width:100px;height:30px;float:right;font-size:14px;color:#fff;background-color:#3bb1da;border-radius:3px}
+.commentCon{width:600px;padding:8px 0 12px}
+.commentSubcon{width:590px;padding:12px 5px 15px;border-bottom:1px dashed #b3b6b7}
+.commentSubcon .img{display:inline;float:left;margin:5px 12px 0 0}
+.commentSubcon .img,.commentSubcon .img img{width:50px;height:50px}
+.commentSubcon dl{width:525px;float:left}
+.commentSubcon dd{width:525px;line-height:24px}
+.commentSubcon dd.userTime{height:24px;padding-bottom:5px}
+.commentSubcon span.user{float:left;color:#1758bd}
+.commentSubcon span.user a{color:#1758bd}
+.commentSubcon span.time{float:right;color:#999}
+.commentMore{width:600px;padding-top:12px;line-height:30px;font-weight:bold;text-align:right}
+.commentMore a{font-size:14px;color:#1758bd}
+/*information pages*/
+.infopageTitle{background-position:0 -166px}
+.infopageCon{width:580px;min-height:418px;_height:418px;padding:10px 5px 12px 15px}
+.infopageCon a{display:inline-block;height:40px;padding:0 15px;margin:5px;line-height:40px;color:#FEF6D0;font-size:14px;background-color:#b57b64}
+.infopageCon a:hover{color:#fffdf1;text-decoration:none;background-color:#bf3d0a}
+
+.correadTitle{width:320px;background-position:100% -228px}
+.correadCon li{width:266px;padding:0 5px;color:#e0ce86}
+.correadCon li div{width:210px;float:left}
+.correadCon li div a{color:#e0ce86}
+.correadCon li span{width:36px;float:right}
+/*map of pages*/
+.herotabs{height:30px;float:left;padding:10px 0 0 40px}
+.herotabs a{cursor:pointer;width:70px;height:30px;float:left;margin:0 1px;line-height:30px;text-align:center;font-size:16px;text-decoration:none}
+.herotabs a.hover,.herotabs a:hover{color:#069;background-color:#fff}
+.mapofListBor{width:580px;min-height:358px;_height:358px;padding:10px 14px 25px}
+.mapofList{width:580px}
+.mapofList li{float:left;width:80px;height:112px;overflow:hidden;padding:10px 18px 0;line-height:32px;font-size:14px;text-align:center}
+.mapofList li img{width:74px;height:74px;border:3px solid #752dcd}
+.herodetailsCon td{padding:12px 6px;border:1px solid #ccc;background-color:#fff}
+.herodetailsCon td a{color:#1758bd;font-weight:bold}
+/*gamedata*/
+.gameData{padding:20px 10px;}
+.gameData h3{border-left:3px solid #5959d2;padding-left:6px;color:#1656c4;clear:both;}
+.dataBox{border:1px solid #6eb3c6;padding:10px 2px;margin:10px auto 20px;line-height:26px;color:#ccc;word-wrap:break-word;}
+.dataBox a{font-size:14px;white-space:nowrap;display:inline-block;padding:0 8px; background:url(../images/line.gif) 100% 6px no-repeat;}
+/*question answer*/
+.QA{width:592px;padding:10px 18px 20px}
+.question{width:586px;padding:15px 3px 6px;border-bottom:1px solid #e3e3e3}
+.QA i{float:left;width:22px;height:22px;margin-right:6px;font-style:normal;font:15px/20px "Microsoft YaHei";color:#fff;text-align:center;border-radius:2px}
+.question i{background-color:#f6733a}
+.Qcontent{width:558px}
+.Qcontent h3{font-size:16px;font-weight:bold}
+.Qcontent p{padding:4px 0;font-size:14px;line-height:25px}
+.Qtime{height:20px;padding-top:16px;color:#999}
+.Qtime span{float:left;padding-right:30px}
+.Qtime span.time{float:right;padding-right:0}
+.answer{width:586px;padding:12px 3px;}
+.answer i{margin-top:1px;background-color:#5cbe42}
+.bestAnswerBor{width:560px;padding-bottom:22px;margin-bottom:10px;border-bottom:1px dashed #ccc}
+.bestAnswer{width:540px;padding:6px 9px;border:1px solid #c6e8bd}
+.borAnswer{width:540px;height:0;padding-top:12px;margin-bottom:12px;font-size:0;line-height:0;border-bottom:1px dashed #e5e5e5}
+.Atitle{width:540px;height:32px;padding-left:25px;font-size:14px;color:#16c314;line-height:30px;background:url(../images/bestAbg.png) no-repeat 0 0}
+.qtAnswer{width:560px;margin-bottom:16px}
+.qtAtitle{height:30px;padding:2px 3px 0}
+.qtAtitle i{width:20px;height:20px;background:#20bee5 url(../images/qtAtitlebg.png) no-repeat center center}
+.qtAtitle .Atitle{float:left;width:auto;padding:0 8px 0 0;color:#989898;line-height:22px;background:none}
+.qtAtitle span{color:#989898;line-height:26px}
+.qtAnswer dd{padding:8px 3px;border-bottom:1px dashed #ccc}
+.qtAnswer dd .Qtime{padding-top:5px}
+.qtAnswer dd.moreA,.similarQuestion li.moreQ{font-size:14px;border-bottom:none}
+.qtAnswer dd.moreA a,.similarQuestion li.moreQ a{text-decoration:underline}
+.similarQuestion{width:550px;padding:3px 5px;border-top:1px solid #e3e3e3}
+.similarQuestion .Atitle{padding:0;font-size:15px;color:#376fc6;background:none}
+.similarQuestion li{width:544px;height:38px;float:left;padding:0 3px;line-height:38px;font-size:14px;border-bottom:1px dashed #ccc}
+.similarQuestion li div{width:390px;height:38px;float:left;padding-left:12px;background:url(../images/pointPNG8.png) no-repeat 0 17px}
+.similarQuestion li span{width:70px;height:38px;float:right;overflow:hidden;font-size:12px;text-align:right}

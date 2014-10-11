@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.downjoy.iask.dao.LogCatDao">
+
+
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id"
+		parameterType="com.downjoy.iask.domain.Log">
+		insert into t_log(user_id,log_create_time,log_search_key,log_search_result_num,game_id)
+		 values(#{userId},#{logCreateTime}
+		,#{logSearchKey}
+		,#{logSearchResultNum},
+		#{gameId})
+	</insert>
+
+</mapper>

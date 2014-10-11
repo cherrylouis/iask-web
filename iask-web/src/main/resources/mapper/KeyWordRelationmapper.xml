@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.downjoy.iask.dao.KeyWordRelationDao" >
+	<resultMap id="BaseResultMap" type="com.downjoy.iask.domain.KeyWordRelation" >
+		<id column="id" property="id" jdbcType="VARCHAR" />
+		<id column="key_words" property="words" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<insert id="insert" parameterType="com.downjoy.iask.domain.KeyWordRelation" >
+   		insert into t_key_words_relations(key_word_first_id, key_word_sencond_id) values(#{firstId}, #{sencondId})
+	</insert>
+	
+	<select id="getGameKeyWords" resultMap="BaseResultMap">
+  	 	select w.id, w.key_words target, g.game_name source FROM t_key_words w , t_game_key_word j, t_game_detail g 
+		where g.id=j.game_id and w.id = j.keyword_id 
+		<if test = " _parameter!=null and _parameter!='' ">
+			and (g.game_name like '%${_parameter}%' or g.game_init_code like '%${_parameter}%' or g.game_all_code like '%${_parameter}%')
+		</if>
+		order by w.frequency DESC LIMIT 0,10
+	</select>
+	
+	<select id="getKeyWordsByLog" resultMap="BaseResultMap">
+		SELECT
+		  w1.key_words    source,
+		  w2.key_words    target
+		FROM (SELECT
+		        COUNT(r.key_word_first_id)    frequency,
+		        r.key_word_first_id      firstid,
+		        r.key_word_sencond_id    secondid
+		      FROM t_key_words_relations r
+		      WHERE r.key_word_first_id IN(SELECT
+		                                     t4.id
+		                                   FROM t_key_words t4
+		                                     LEFT JOIN t_game_key_word w
+		                                       ON w.keyword_id = t4.id
+		                                   WHERE (t4.key_words LIKE '%${param2}%'
+		                                           OR t4.pinin_init_code LIKE '%${param2}%'
+		                                           OR t4.pinin_all_code LIKE '%${param2}%')
+		                                       AND w.game_id = #{param1})
+		      GROUP BY r.key_word_first_id, r.key_word_sencond_id) t
+		  LEFT JOIN t_key_words w1
+		    ON t.firstid = w1.id
+		  LEFT JOIN t_key_words w2
+		    ON t.secondid = w2.id
+		ORDER BY t.frequency DESC LIMIT 0,10
+	</select>
+	
+	<select id="getKeyWordsByFrequency" resultMap="BaseResultMap">
+  	 	SELECT
+		  t1.key_words    target,
+		  t.key_words     source
+		FROM t_key_words t1
+		  LEFT JOIN t_game_key_word t2
+		    ON t1.id = t2.keyword_id
+		  LEFT JOIN (SELECT
+		               t3.game_id,
+		               t4.key_words
+		             FROM t_game_key_word t3
+		               LEFT JOIN t_key_words t4
+		                 ON t3.keyword_id = t4.id
+		             WHERE (t4.key_words LIKE '%${param2}%'
+		                     OR t4.pinin_init_code LIKE '%${param2}%'
+		                     OR t4.pinin_all_code LIKE '%${param2}%')
+		                 AND t3.game_id = #{param1}) t
+		    ON t.game_id = t2.game_id
+		WHERE t1.key_words != t.key_words
+		ORDER BY t1.frequency DESC
+		LIMIT 0, 10
+	</select>
+</mapper>

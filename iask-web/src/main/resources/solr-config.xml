@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+">
+
+   <bean id="solrSearchService" class="com.downjoy.iask.service.baseservice.SolrSearchService" init-method="init">
+      <property name="url" value="${solr_url}" />
+      <property name="keywordUrl" value="${keyword_url}" />
+      <property name="soTimeOut" value="${solr_time_out}"/>
+      <property name="connectionTimeOut" value="${connection_TimeOut}" />
+      <property name="maxConnectionsPerHost" value="${max_Connections_Per_Host}" />
+      <property name="maxTotalConnections" value="${max_Total_Connections}"></property>
+      <property name="maxRetries" value="${max_Retries}"></property>
+      <property name="solrQuery" ref="solrQuery"></property>
+   </bean>
+   <bean id="solrQuery" class="org.apache.solr.client.solrj.SolrQuery" />
+</beans>

@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+date:2014-5-26
+by:lily li
+*/
+.container{background:url(../images/allbg.jpg) no-repeat top center}
+.main{background:url(../images/mainbg.jpg) no-repeat top center}
+/*logo*/
+.logo{height:337px;padding:9px 0 0 336px}
+.logo h1,.logo h1 a{width:356px;height:235px}
+.logo h1 a{display:block}
+/*download*/
+.download{width:418px;height:74px;padding:20px 0 0 26px}
+.downloadSubon{position:relative;width:180px;height:60px}
+.androiddown{padding-right:30px}
+.downloadSubon a,.downloadSubon span{cursor:pointer;display:block;width:180px;height:60px}
+.androidShow a{width:178px;height:auto;padding:8px 10px}
+/*news*/
+.news{width:500px;height:270px;background-color:#fff;border:1px solid #22426e}
+.newsTitle{width:500px;height:37px;background-color:#cee5fa;border-bottom:1px solid #cbcac9}
+.newsTitle li{cursor:pointer;width:65px;height:37px;float:left;text-align:center;font:16px/37px "Microsoft YaHei";background-color:#fff;border-right:1px solid #cbcac9}
+.newsTitle li.hover{color:#fff;background-color:#1c9dde}
+.newsCon{position:relative;width:470px;height:227px;float:left;padding:5px 10px 0 20px}
+.newsSubcon{display:none}
+.newsCon ul{width:470px;height:227px}
+.newsCon li{width:470px;height:32px;float:left;line-height:32px;font-size:14px}
+.newsCon li div{width:348px;height:32px;float:left;padding-left:8px;background:url(../images/pointPNG8.png) no-repeat 0 13px}
+.newsCon li span{width:52px;float:right}
+.newsMore{position:absolute;top:-34px;right:10px;color:#036;font:14px/30px "Microsoft YaHei"}
+/*download text*/
+.downTextbtn{width:444px;height:270px;margin-left:12px;border:1px solid #ffde00;background:url(../images/downbg.jpg) no-repeat}
+.downText{width:390px;height:168px;overflow:hidden;padding:0 26px 0 28px;line-height:24px;color:#fff}
+.downText span{padding-right:8px}
+/*hero mapof*/
+.module{width:960px}
+.heroTitle{background:url(../images/titlebg.jpg) no-repeat 0 0}
+.herotab{height:30px;float:left;padding:10px 0 0 140px}
+.herotab li{cursor:pointer;width:86px;height:30px;float:left;line-height:30px;text-align:center;font-size:16px}
+.herotab li.hover{color:#069;background-color:#fff}
+.heroCon{width:928px;height:244px;overflow:hidden;padding:10px 16px;background-color:#fff}
+.heroSubcon{display:none}
+.heroCon a{float:left;width:80px;height:112px;overflow:hidden;margin:10px 18px 0;line-height:32px;font-size:14px;text-align:center}
+.heroCon a img{width:74px;height:74px;border:3px solid #752dcd}
+/*introduce*/
+.newsintro{width:319px}
+.newsintro3{width:322px}
+.newsintroTitle{background:url(../images/titlebg.jpg) no-repeat 0 -42px}
+.newsintroTitle2{background-position:-319px -42px}
+.newsintroTitle3{background-position:-638px -42px}
+.newsintroCon{height:202px;overflow:hidden;padding:10px 0 26px;background-color:#fff}
+.newsintroCon2{background:#fff url(../images/introrepybg.png) repeat-y}
+.newsintroCon li{width:130px;height:36px;float:left;padding-left:25px;font-size:14px;line-height:36px;background:url(../images/pointPNG8.png) no-repeat 15px -24px}
+/*video*/
+.videoCon{height:189px;padding:29px 8px}
+.videoCon a{position:relative;display:block}
+.videoCon a,.videoCon a img{width:303px;height:189px}
+.videoCon a span{cursor:pointer;position:absolute;left:50%;top:50%;width:63px;height:63px;margin:-32px 0 0 -32px;background:url(../images/videoiconbg.png) no-repeat 0 0}
+/*bbs hot*/
+.bbshotCon,.gamespicCon{height:227px;overflow:hidden;padding:10px 0}
+.bbshotCon li{width:319px;height:28px;float:left;font-size:14px;line-height:28px;}
+.bbshotCon li div{width:230px;height:28px;float:left;padding-left:25px;background:url(../images/pointPNG8.png) no-repeat 15px -28px}
+.bbshotCon li span{width:52px;float:right;color:#999}
+/*games pic*/
+.gamespicCon{height:225px;padding:4px 0 18px}
+.gamespictab{width:322px;height:29px;text-align:center;border-bottom:1px solid #d6d6d6}
+.gamespictab span{cursor:pointer;display:inline-block;width:62px;height:29px;font-size:14px;line-height:29px}
+.gamespictab span.hover,.gamespictab span:hover{height:28px;color:#1758bd;line-height:28px;border-left:1px solid #d6d6d6;border-right:1px solid #d6d6d6;border-top:2px solid #1c9dde;background-color:#fff}
+.gamespictabCon{width:322px;height:204px;padding-top:5px}
+.gamespicSubcon{position:relative;display:none;width:322px}
+.gamespicSubcon span{cursor:pointer;position:absolute;width:14px;height:27px;top:86px;text-indent:-9999em;background:url(../images/btnbg.png) no-repeat}
+.gamespicSubcon span.prev{left:5px;background-position:0 0}
+.gamespicSubcon span.next{right:5px;background-position:-16px 0}
+.gamespicSubconA{position:relative;width:270px;height:204px;overflow:hidden;margin-left:26px}
+.gamespicSubconS{position:absolute;width:99999em}
+.gamespicSubconA ul{float:left}
+.gamespicSubconA li{display:inline;overflow:hidden;float:left;margin:0}
+.gamespicSubconA li,.gamespicSubconA li img{width:270px;height:204px}
+/*comment*/
+.comment{width:638px}
+.commentTitle{background:url(../images/titlebg.jpg) no-repeat 0 -84px}
+.commentTitle h2 span{padding-left:6px;font-size:14px}
+.commentTitle h2 span strong{color:#fcff00}
+.commentTitle a{cursor:pointer;width:84px;height:29px;float:right;margin:6px 14px 0 0;font:16px/29px 'Microsoft YaHei';color:#ca5a00;text-decoration:none;text-align:center;background:url(../images/btnbg.png) no-repeat 0 -30px}
+.commentSub{height:240px;padding:8px 0;font-size:14px;background-color:#fff}
+#scrollDiv{width:606px;height:210px;overflow:hidden;padding:0 16px}
+.commentCon li{width:606px;height:30px;line-height:30px}
+.commentCon li span.username,.commentCon li span.username a{color:#1758bd}
+.commentMore{width:615px;height:30px;text-align:right;line-height:30px}
+.commentMore a{font-weight:bold;color:#1758bd}
+#fullbg{background-color:Gray;left:0px;opacity:0.5;height:100%;position:absolute;top:0px;z-index:999998;filter:alpha(opacity=50);/* IE6 */-moz-opacity:0.5; /* Mozilla */-khtml-opacity:0.5;/* Safari */}
+.commentShow{position:fixed!important;position:absolute;z-index:999999;top:50%;left:50%;display:none;width:570px;margin:-119px 0 0 -307px;padding:15px 22px 18px;background-color:#d3e6ed;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))-180)}
+.commentShow .closediv{cursor:pointer;position:absolute;top:13px;right:13px;width:19px;height:19px;background:url(../images/closebgPNG8.png) no-repeat}
+.commentShow h2{padding-bottom:12px;font-size:16px;color:#1758bd}
+.commentShow textarea{width:560px;height:105px;padding:5px;font-size:14px;color:#9f9f9f;line-height:24px;border:1px solid #88ace2;background-color:#fff}
+.commentLRBtn{width:572px;height:32px;padding:12px 0 0 0;line-height:32px;text-align:right}
+.commentLRBtn input.yzmcode{width:58px;height:25px;padding:0 3px;line-height:23px;border:1px solid #88ace2;background-color:#fff}
+.commentLRBtn img{margin:0 4px}
+.commentLRBtn a{margin-right:10px;color:#fd000a;text-decoration:underline}
+.commentLRBtn input.btn{cursor:pointer;width:88px;height:32px;font-size:14px;color:#fff;border-radius:3px;background-color:#3bb1da}
+/*games information*/
+.gamesinfo{width:322px}
+.gamesinfoTitle{background-position:-638px -84px}
+.gamesinfoCon{width:282px;height:234px;overflow:hidden;padding:0 20px}
+.gamesinfoCon dd{line-height:26px;font-size:14px}
+/*links*/
+.linksCon{padding:10px 15px 15px;line-height:28px;font-size:14px;background-color:#fff}
+.linksCon a{display:inline-block;margin:0 10px}
+/*gift*/
+.gift{width:92px;height:81px;_margin:44px 0 0;right:95px;top:205px;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)-343))}
+.gift a{display:block;width:76px;height:27px;padding:56px 0 0 16px;background:url(../images/gift-1.png) no-repeat}
+.gift a span{display:block;width:61px;height:20px;background:url(../images/gift-1_03.gif) no-repeat}
